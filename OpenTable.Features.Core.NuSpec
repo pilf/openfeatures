@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.00</version>
+    <authors>OpenTable</authors>
+    <owners>OpenTable</owners>
+    <id>OpenTable.Features.Core</id>
+    <title>OpenTable.Features.Core</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core framework (without any PageObjects or TestData etc.)</description>
+    <copyright>Copyright OpenTable 2013</copyright>
+  <dependencies>
+    <dependency id="Coypu" />
+    <dependency id="Coypu.Watin" />
+    <dependency id="Newtonsoft.Json" />
+    <dependency id="Nunit" />
+    <dependency id="SpecFlow" />
+    <dependency id="Selenium.WebDriver" />
+  </dependencies>
+  </metadata>
+
+  <files>
+    <file src="SiteFeatures\Core\bin\Debug\OpenTable.Features.Core.dll" target="lib\OpenTable.Features.Core.dll" />
+  </files>
+</package>

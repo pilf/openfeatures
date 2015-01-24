@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.01</version>
+    <authors>OpenTable</authors>
+    <owners>OpenTable</owners>
+    <id>OpenTable.Features.ServiceBundle</id>
+    <title>OpenTable.Features.ServiceBundle</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides some tools to help test services.  See: https://confluence.otcorp.opentable.com/pages/editpage.action?pageId=4295366</description>
+    <copyright>Copyright OpenTable 2013</copyright>
+  <dependencies>
+    <dependency id="OpenTable.Features.Core" />
+    <dependency id="Microsoft.Net.Http" />
+  </dependencies>
+  </metadata>
+  <files>
+    <file src="SiteFeatures\ServiceBundle\bin\Debug\OpenTable.Features.ServiceBundle.dll" target="lib\OpenTable.Features.ServiceBundle.dll" />
+  </files>
+</package>

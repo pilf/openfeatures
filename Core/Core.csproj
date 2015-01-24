@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A728B0E9-70FD-4828-B0A6-61D5B58B6FE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenTable.Features.Core</RootNamespace>
+    <AssemblyName>OpenTable.Features.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Coypu, Version=0.23.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Coypu.0.23.1\lib\net40\Coypu.dll</HintPath>
+    </Reference>
+    <Reference Include="Coypu.Drivers.Watin, Version=0.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Coypu.Watin.0.15.0\lib\net40\Coypu.Drivers.Watin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.37.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.2.37.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.37.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.Support.2.37.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Browsers\OtBrowserFactory.cs" />
+    <Compile Include="Helpers\EnvironmentVariableHelper.cs" />
+    <Compile Include="Interfaces\ICoreComponents.cs" />
+    <Compile Include="OtServices.cs" />
+    <Compile Include="Interfaces\ISiteDictionary.cs" />
+    <Compile Include="Drivers\OtDriverFactory.cs" />
+    <Compile Include="Errors\KeyAlreadyExistsError.cs" />
+    <Compile Include="Errors\MementoExceptionBase.cs" />
+    <Compile Include="Errors\UnknownKeyForgetError.cs" />
+    <Compile Include="Errors\UnknownKeyRecallError.cs" />
+    <Compile Include="Helpers\AttemptHelper.cs" />
+    <Compile Include="Helpers\RandomStringHelper.cs" />
+    <Compile Include="Interfaces\IOtBrowser.cs" />
+    <Compile Include="Interfaces\IBasicEnvironmentSettings.cs" />
+    <Compile Include="Interfaces\IOtSite.cs" />
+    <Compile Include="OtStepBase.cs" />
+    <Compile Include="Interfaces\ISiteGenerator.cs" />
+    <Compile Include="EnvironmentSettings\BasicEnvironmentSettings.cs" />
+    <Compile Include="ProductionProtection\EnvironmentSettingsReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Drivers\OtRemoteWebDriver.cs" />
+    <Compile Include="SitePhrases.cs" />
+    <Compile Include="Helpers\PhrasesConfigHelper.cs" />
+    <Compile Include="Interfaces\IComponentGenerator.cs" />
+    <Compile Include="Helpers\EnvironemntVariableHelper.cs" />
+    <Compile Include="Helpers\EnvironmentConfigHelper.cs" />
+    <Compile Include="Either.cs" />
+    <Compile Include="ScreenShotCapture\ScreenShot.cs" />
+    <Compile Include="Interfaces\IScenarioContext.cs" />
+    <Compile Include="Interfaces\IPageObject.cs" />
+    <Compile Include="Interfaces\IServiceObject.cs" />
+    <Compile Include="Interfaces\ITestDataObject.cs" />
+    <Compile Include="EnvironmentSettings\JsonEnvironmentSettings.cs" />
+    <Compile Include="OtDriverBrowser.cs" />
+    <Compile Include="CoypuOtSite.cs" />
+    <Compile Include="PageObjectExtensions.cs" />
+    <Compile Include="ProductionProtection\IProductionProtectionConfigurationReader.cs" />
+    <Compile Include="ProductionProtection\IProductionProtector.cs" />
+    <Compile Include="ProductionProtection\ProductionProtector.cs" />
+    <Compile Include="ProductionProtection\TriedToAccessNotAllowedIpException.cs" />
+    <Compile Include="Interfaces\IConsumerSiteEnvironment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

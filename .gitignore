@@ -1,0 +1,17 @@
+obj
+bin
+deploy
+*.csproj.user
+*.suo
+*ReSharper*
+*.orig
+*.dotCover
+output
+*.TeamCitySharp.sln.metaproj*
+*.DotSettings.*
+*StyleCop.Cache
+*debug.css
+logs/
+*ncrunch*
+.DS_Store
+.svn

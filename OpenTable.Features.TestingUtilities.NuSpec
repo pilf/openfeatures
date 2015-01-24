@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.01</version>
+    <authors>OpenTable</authors>
+    <owners>OpenTable</owners>
+    <id>OpenTable.Features.TestingUtilities</id>
+    <title>OpenTable.Features.TestingUtilities</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Various utilities for testing, e.g. generating random data inputs.</description>
+    <copyright>Copyright OpenTable 2013</copyright>
+  <dependencies>
+  </dependencies>
+  </metadata>
+  <files>
+    <file src="SiteFeatures\TestingUtilities\bin\Debug\OpenTable.Features.TestingUtilities.dll" target="lib\OpenTable.Features.TestingUtilities.dll" />
+  </files>
+</package>

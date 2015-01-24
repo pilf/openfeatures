@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.00</version>
+    <authors>OpenTable</authors>
+    <owners>OpenTable</owners>
+    <id>OpenTable.Testing</id>
+    <title>OpenTable.Testing</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>OpenTable.Testing</description>
+    <copyright>Copyright OpenTable 2012</copyright>
+      <dependencies>
+    		<dependency id="NUnit" />
+    		<dependency id="OpenTable.MiddleTier.CommonClasses" />
+	    </dependencies>
+  </metadata>
+  <files>
+    <file src="_WebCommon\Testing\bin\release\opentable.Testing.dll" target="lib\opentable.Testing.dll" />
+  </files>
+</package>
