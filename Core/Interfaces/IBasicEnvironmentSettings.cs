@@ -6,6 +6,5 @@ namespace OpenTable.Features.Core.Interfaces
 	{
 		string BaseUrl { get; }
 		IEnumerable<string> IpAddresses { get; }
-		int DomainId { get; }
 	}
 }
